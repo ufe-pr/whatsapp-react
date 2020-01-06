@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    line-height:1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+
+/* My style */
+
+:root {
+  --teal-green: #075E54;
+  --light-teal-green: #128C7E;
+  --light-green: #25D366;
+
+}
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.whatsapp-header {
+  background: var(--teal-green);
+  color: #fff;
+}
+
+.header-tabs {
+  width: 100%;
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 12px;
+  color: #ffffffab;
 }
 
-.App-link {
-  color: #61dafb;
+.header-tabs *:not(svg) {
+  flex-grow: 2;
+  text-align: center;
+  padding: 10px 0;
+  /* padding: 12px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-tabs svg {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.selected {
+  border-bottom: #fff solid 3px;
+  color: #fff;
+}
+
+.app-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.action-buttons * {
+    margin-left: 25px;
+}
+
+.whatsapp {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.float-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 20px;
+    background: var(--light-green);
+    color: #fff;
+    border-radius: 30px;
+}
+
+.chats {
+    padding: 0 10px;
+}
+
+.dp {
+    background-image: url(./assets/images/dp.jpg);
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+
+.chat, .chat-name-time, .chat-content-count, .chat-count-muted {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-sum {
+    flex-grow: 1;
+    padding: 15px 0;
+    border-bottom: 1px solid #0000002f;
+    font-size: 14px;
+}
+
+.chat:last-child .chat-sum {
+    border-bottom: none;
+}
+
+.chat-name {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.chat-name-time {
+    padding: 0 0 6px 0;
+}
+
+.chat-content-count {
+    color: #444444ad;
+    padding-right: 5px;
+}
+
+.chat-muted {
+    font-size: 18px;
+}
+
+.chat-unread {
+    background-color: var(--light-green);
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+.chat-time {
+    color: var(--light-green);
 }
